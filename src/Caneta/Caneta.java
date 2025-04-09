@@ -1,45 +1,47 @@
 package Caneta;
 
+
 public class Caneta {
 
-  //Esses são referências à atributos:
+    private String modelo;
+    private String cor;
+    private float ponta;
+    private boolean tampada;
 
-  public String modelo;
-  public String cor;
-  public float ponta;
-  public int carga;
-  public boolean tampada;
+    public Caneta(String modelo, String cor, float ponta) {
+        this.modelo = modelo;
+        this.cor = cor;
+        this.ponta = ponta;
+    }
 
-  //Essa é uma referência ao método
-  //OBS: MÉTODO SEM TEM ()
-  //this. é para chamar o objeto, nesse caso quem tá chamando é c1
+    public String getModelo() {
+        return this.modelo;
+    }
+
+    public void setModelo(String m) {
+        this.modelo = m;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String c) {
+        this.cor = c;
+    }
+
+    public float getPonta() {
+        return ponta;
+    }
+
+    public void setPonta(float p) {
+        this.ponta = ponta;
+    }
 
     public void status() {
-        System.out.println("Uma caneta, " + this.cor + ";");
-        System.out.println("Ponta, " + this.ponta + ";");
-        System.out.println("Tampada? " + this.tampada + ";");
-        System.out.println("Modelo, " + this.modelo + ";");
-        System.out.println("Carga, " + this.carga + "%.");
-    }
-
-   public void tampar(){
-      this.tampada = true;
-    }
-
-   public void destampar() {
-      this.tampada = false;
-
-  }
-   public void rabiscar() {
-
-      if (this.tampada == true) {
-        System.out.println("Pode riscar!");
-      }
-      else if (this.tampada == false){
-        System.out.println("Não pode riscar, caneta tampada");
-      }
-
+        System.out.println("Modelo: " + this.modelo);
+        System.out.println("Ponta: " + this.ponta);
+        System.out.println("Cor: " + this.cor);
+        System.out.println("Tamapda? " + this.tampada);
     }
 }
-
-
